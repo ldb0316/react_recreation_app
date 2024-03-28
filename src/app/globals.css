@@ -408,8 +408,13 @@ hr {
   align-items: center;
 }
 
+.fill-parent {
+  height: 100%;
+}
+
+
 .spread-elements {
-  justify-content: space-between;
+  justify-content: space-between !important;
 }
 
 /* ���진과 패딩을 유동적으로 지정할 수 있는 CSS 클래스 */
