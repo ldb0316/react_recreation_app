@@ -24,8 +24,18 @@ export default function TeamPage() {
 
     //팀 그룹을 추가
     function addTeam() {
-        setTeamNames(teamNames.concat(teamName));
-        setTeamName('');
+        if (teamNames.length === 5) {
+            alert("팀은 최대 5개까지 추가 가능합니다.");
+            return false;
+        } else {
+            if(teamName) {
+                setTeamNames(teamNames.concat(teamName));
+                setTeamName('');
+            } else {
+                alert("팀 이름을 입력해주세요");
+                return false;
+            }
+        }
     }
 
     //팀 그룹을 삭제
